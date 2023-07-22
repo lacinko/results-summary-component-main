@@ -1,15 +1,5 @@
+import { SummaryTableListProps } from "../types";
 import ScoreListItem from "./ScoreListItem";
-
-type SummaryTableListProps = {
-  scoreCategory: ScoreCategoryItem[];
-};
-
-type ScoreCategoryItem = {
-  iconLink: string;
-  category: string;
-  score: number;
-  color: string;
-};
 
 function SummaryTableList({
   scoreCategory,
