@@ -1,23 +1,23 @@
-import ScoreListItem from './ScoreListItem'
+import ScoreListItem from "./ScoreListItem";
 
 type SummaryTableListProps = {
-  scoreCategory: ScoreCategoryItem[]
-}
+  scoreCategory: ScoreCategoryItem[];
+};
 
 type ScoreCategoryItem = {
-  iconLink: string
-  category: string
-  score: number
-  color: string
-}
+  iconLink: string;
+  category: string;
+  score: number;
+  color: string;
+};
 
 function SummaryTableList({
   scoreCategory,
 }: SummaryTableListProps): JSX.Element {
   return (
-    <div className="my-6 mx-10">
-      <p className="pb-4 font-medium text-lg">Summary</p>
-      <ul className="flex flex-col gap-4 pb-4">
+    <div className="my-6 mx-10 md:w-full md:max-w-sm md:rounded-tr-[2rem] md:rounded-br-[2rem] md:p-8 md:pl-12 md:m-0 md:ml-[-1rem] bg-white">
+      <p className="pb-4 md:font-bold text-lg md:pb-7 md:text-xl">Summary</p>
+      <ul className="flex flex-col gap-4 pb-4 md:pb-9">
         {scoreCategory.map((score) => (
           <ScoreListItem {...score} key={score.category} />
         ))}
@@ -26,7 +26,7 @@ function SummaryTableList({
         Continue
       </button>
     </div>
-  )
+  );
 }
 
-export default SummaryTableList
+export default SummaryTableList;
